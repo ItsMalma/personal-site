@@ -1,3 +1,4 @@
+import ThemeProvider from "@/components/providers/ThemeProvider";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { Inter } from "next/font/google";
@@ -8,8 +9,14 @@ export const fontSans = Inter({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div id="root" className={fontSans.className}>
-      <Component {...pageProps} />
-    </div>
+    <ThemeProvider
+      attribute="class"
+      defaultTheme="dark"
+      disableTransitionOnChange
+    >
+      <div id="root" className={fontSans.className}>
+        <Component {...pageProps} />
+      </div>
+    </ThemeProvider>
   );
 }
