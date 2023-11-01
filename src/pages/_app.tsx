@@ -1,4 +1,5 @@
 import ThemeProvider from "@/components/providers/ThemeProvider";
+import { cn } from "@/lib/utils";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { Inter } from "next/font/google";
@@ -14,7 +15,10 @@ export default function App({ Component, pageProps }: AppProps) {
       defaultTheme="dark"
       disableTransitionOnChange
     >
-      <div id="root" className={fontSans.className}>
+      <div
+        id="root"
+        className={cn("min-h-screen flex flex-col", fontSans.className)}
+      >
         <Component {...pageProps} />
       </div>
     </ThemeProvider>

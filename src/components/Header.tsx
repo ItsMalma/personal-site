@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -30,7 +29,7 @@ export default function Header() {
         "bg-slate-950 text-white",
         "px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 2xl:px-40",
         "py-2 lg:py-3 xl:py-4",
-        "sticky top-0",
+        "sticky top-0 z-50",
         "flex items-center",
         "md:gap-4 lg:gap-6 xl:gap-8 2xl:gap-10",
         "shadow"
@@ -56,15 +55,15 @@ export default function Header() {
         </NavigationMenuList>
       </NavigationMenu>
       <DropdownMenu>
-        <DropdownMenuTrigger className="ml-auto md:hidden">
-          <Button variant="ghost" size="icon">
-            <MenuIcon />
-          </Button>
+        <DropdownMenuTrigger className="ml-auto md:hidden outline-none">
+          <MenuIcon />
         </DropdownMenuTrigger>
         <DropdownMenuContent className="md:hidden">
           {items.map((item) => (
             <DropdownMenuItem key={item.id}>
-              <Link href={item.link}>{item.text}</Link>
+              <Link href={item.link} legacyBehavior passHref>
+                {item.text}
+              </Link>
             </DropdownMenuItem>
           ))}
         </DropdownMenuContent>
