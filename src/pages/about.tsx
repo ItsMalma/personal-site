@@ -222,6 +222,16 @@ export default function About() {
             period="2023 - Now"
           />
         </Section>
+        <Section title="Address">
+          <iframe
+            className="w-full"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.90896488687997!2d106.60262102312319!3d-6.191876522608921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fee7b2ed1a77%3A0xa7e8e7b8b69c1ab9!2sJl.%20Nn%20No.20%2C%20RT.9%2FRW.8%2C%20Cibodas%2C%20Kec.%20Cibodas%2C%20Kota%20Tangerang%2C%20Banten%2015138!5e0!3m2!1sid!2sid!4v1698799529676!5m2!1sid!2sid"
+            height="450"
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </Section>
       </div>
     </>
   );
